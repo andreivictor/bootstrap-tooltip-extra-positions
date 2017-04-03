@@ -1,0 +1,75 @@
+//== Some Bootstrap variables for Tooltips
+//
+//##
+
+//** Tooltip background color
+$tooltip-bg:                  #000;
+
+//** Tooltip arrow width
+$tooltip-arrow-width:         5px;
+//** Tooltip arrow color
+$tooltip-arrow-color:         $tooltip-bg;
+
+
+//== Styles for Tooltip Extra Positions
+//
+//##
+
+// Base class
+.tooltip {
+  
+   &.top-l,
+   &.top-r {
+     margin-top: -3px;
+     padding: $tooltip-arrow-width 0; 
+  }
+  
+  &.bottom-l,
+  &.bottom-r {
+    margin-top: 3px;
+    padding: $tooltip-arrow-width 0;
+  }  
+  
+}
+
+// Arrows
+.tooltip {
+  
+  &.top-l .tooltip-arrow,
+  &.top-r .tooltip-arrow {
+    bottom: 0;
+    border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
+    border-top-color: $tooltip-arrow-color;
+    margin-bottom: 0; // overrides some (deprecated) bootstrap css
+  }
+  
+  &.top-l .tooltip-arrow {
+    left: $tooltip-arrow-width;
+    right: auto; // overrides some (deprecated) bootstrap css
+  }
+  
+  &.top-r .tooltip-arrow {
+    right: $tooltip-arrow-width;
+    left: auto; // overrides some (deprecated) bootstrap css 
+  }
+  
+  &.bottom-l .tooltip-arrow,
+  &.bottom-r .tooltip-arrow {
+    top: 0;
+    border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
+    border-bottom-color: $tooltip-arrow-color;
+    margin-top: 0; // overrides some (deprecated) bootstrap css
+  }
+  
+  &.bottom-l .tooltip-arrow {
+    left: $tooltip-arrow-width;
+    right: auto; // overrides some (deprecated) bootstrap css 
+  }
+  
+  &.bottom-r .tooltip-arrow {
+    right: $tooltip-arrow-width;
+    left: auto; // overrides some (deprecated) bootstrap css 
+  }
+  
+  
+}
