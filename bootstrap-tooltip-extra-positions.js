@@ -15,6 +15,12 @@
   var Tooltip = $.fn.tooltip.Constructor;
   
   Tooltip.prototype.applyPlacement = function (offset, placement) {
+    
+    /* Bootstrap tooltip extra positions
+     * define extra positions
+     */
+    var extra_positions = [ 'top-l', 'top-r', 'bottom-l', 'bottom-r' ];
+    
     var $tip   = this.tip()
     var width  = $tip[0].offsetWidth
     var height = $tip[0].offsetHeight
@@ -62,11 +68,10 @@
     
     $tip.offset(offset)
         
-    // if placement is 'top-l', 'top-r', 'bottom-l', 'bottom-r'
-    // replaceArrow show do nothing
-    if ( placement == 'top-l' || placement == 'top-r' || placement == 'bottom-l' || placement == 'bottom-r' ) {
-      this.replaceArrow(arrowDelta, arrowDelta, isVertical)
-    } else {
+    /* Bootstrap tooltip extra position
+     * if tooltip is positioned in one of the extra positions, we should skip replaceArrow function
+     */    
+    if ( $.inArray(placement, extra_positions) == -1 ) {
       this.replaceArrow(arrowDelta, $tip[0][arrowOffsetPosition], isVertical)
     } 
     
@@ -76,6 +81,9 @@
     return placement == 'bottom' ? { top: pos.top + pos.height,   left: pos.left + pos.width / 2 - actualWidth / 2 } :
            placement == 'top'    ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2 } :
            placement == 'left'   ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } :
+          /* Bootstrap tooltip extra position
+           * calculate offset for the extra positions
+           */
            placement == 'top-l' ? { top: pos.top - actualHeight, left: pos.left } :
            placement == 'top-r' ? { top: pos.top - actualHeight, left: pos.left + pos.width - actualWidth } :
            placement == 'bottom-l' ? { top: pos.top + pos.height,   left: pos.left } :
@@ -84,14 +92,3 @@
   };
     
 })(window.jQuery);
-
-
-/** **/
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip({
-    trigger: 'hover focus'
-  });
-});
-
-
-
