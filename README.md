@@ -1,5 +1,5 @@
 # Bootstrap Tooltip Extra Positions
-Extend Bootstrap 3 Tooltip plugin by adding 4 extra positions: top-left, top-right, bottom-left, bottom-right.
+Extend Bootstrap 3 Tooltip plugin by adding 4 extra positions: **top-left**, **top-right**, **bottom-left**, **bottom-right**.
 
 ## Usage
 
@@ -15,13 +15,6 @@ Example:
 <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top-l" title="Tooltip on top-left">Tooltip on top-left</button>
 ```
 
-#### Javascript
-Incude the script after Bootstrap's main javascript file:
-```html
-<script src="bootstrap.js"></script>
-<script src="bootstrap-tooltip-extra-positions.js"></script>
-```
-
 #### CSS
 Include `bootstrap-tooltip-extra-position.css` in your project or use the `.scss` file:
 ```html
@@ -30,6 +23,20 @@ Include `bootstrap-tooltip-extra-position.css` in your project or use the `.scss
 SASS:
 ```sass
 @import "bootstrap-tooltip-extra-position";
+```
+
+#### Javascript
+Include the script after Bootstrap's main javascript file:
+```html
+<script src="bootstrap.js"></script>
+<script src="bootstrap-tooltip-extra-positions.js"></script>
+```
+
+Initialize the tooltips:
+```javascript
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
 ```
 
 ## Demo
