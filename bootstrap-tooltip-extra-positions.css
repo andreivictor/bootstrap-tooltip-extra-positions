@@ -1,5 +1,4 @@
-// Base class
-//
+/* Base class */
 .tooltip.top-l,
 .tooltip.top-r {
   margin-top: -3px;
@@ -11,8 +10,7 @@
   padding: 5px 0;
 }
 
-// Arrows
-//
+/* Arrows */
 .tooltip.top-l .tooltip-arrow,
 .tooltip.top-r .tooltip-arrow {
   bottom: 0;
