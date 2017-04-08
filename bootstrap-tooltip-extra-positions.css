@@ -1,51 +1,39 @@
-// Tooltip base
+// Base class
 //
-.tooltip.top-l, 
+.tooltip.top-l,
 .tooltip.top-r {
   margin-top: -3px;
   padding: 5px 0;
 }
-
-.tooltip.bottom-l, 
+.tooltip.bottom-l,
 .tooltip.bottom-r {
   margin-top: 3px;
   padding: 5px 0;
 }
 
-// Tooltip arrow
+// Arrows
 //
-.tooltip.top-l .tooltip-arrow, 
+.tooltip.top-l .tooltip-arrow,
 .tooltip.top-r .tooltip-arrow {
   bottom: 0;
   border-width: 5px 5px 0;
   border-top-color: #000;
-  margin-bottom: 0;
 }
-
 .tooltip.top-l .tooltip-arrow {
   left: 5px;
-  right: auto;
 }
-
 .tooltip.top-r .tooltip-arrow {
   right: 5px;
-  left: auto;
 }
-
-.tooltip.bottom-l .tooltip-arrow, 
+.tooltip.bottom-l .tooltip-arrow,
 .tooltip.bottom-r .tooltip-arrow {
   top: 0;
   border-width: 0 5px 5px;
   border-bottom-color: #000;
-  margin-top: 0;
 }
-
 .tooltip.bottom-l .tooltip-arrow {
   left: 5px;
-  right: auto;
 }
-
 .tooltip.bottom-r .tooltip-arrow {
   right: 5px;
-  left: auto;
 }
