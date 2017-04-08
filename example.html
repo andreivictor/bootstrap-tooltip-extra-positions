@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap 3 Tooltip Extra Positions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="bootstrap-tooltip-extra-positions.css">
+  
+  <style>
+  .bs-example {
+    position: relative;
+    margin: 15px;
+    padding: 15px 15px 25px;
+    border: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .bs-example .btn {
+    margin: 5px;
+  }
+
+  .bs-example__title {
+    margin-bottom: 20px;
+  }
+
+  .bs-example--static .tooltip {
+    position: relative;
+    display: inline-block;
+    margin: 10px 20px;
+    opacity: 1;
+  }
+  </style>
+  
+</head>
+
+<body>
+
+  <div class="bs-example bs-example--static">
+  
+    <h3 class="bs-example__title">Static examples</h3>
+   
+    <div class="tooltip top-l" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">Tooltip on the top-left</div>
+    </div>
+
+    <div class="tooltip top-r" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">Tooltip on the top-right</div>
+    </div>
+
+    <div class="tooltip bottom-l" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">Tooltip on the bottom-left</div>
+    </div>
+
+    <div class="tooltip bottom-r" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">Tooltip on the bottom-right</div>
+    </div>
+      
+  </div> <!-- end .bs-example  -->
+
+  <div class="bs-example">
+  
+    <h3 class="bs-example__title">Dinamic examples</h3>
+  
+    <button class="btn btn-default" data-toggle="tooltip" data-placement="top-l" title="Tooltip on top-left">Tooltip on top-left</button>
+    
+    <button class="btn btn-default" data-toggle="tooltip" data-placement="top-r" title="Tooltip on top-right">Tooltip on top-right</button>
+  
+    <button class="btn btn-default" data-toggle="tooltip" data-placement="bottom-l" title="Tooltip on bottom-left">Tooltip on bottom-left</button>
+    
+    <button class="btn btn-default" data-toggle="tooltip" data-placement="bottom-r" title="Tooltip on bottom-right">Tooltip on bottom-right</button>
+    
+  </div> <!-- end .bs-example-tooltip  -->
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js'></script>
+  <script src="bootstrap-tooltip-extra-positions.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip({
+      container: 'body'
+    });
+  });
+  </script>
+
+</body>
+</html>
